@@ -1,0 +1,46 @@
+@import "../../app/globalStyles/breakpoints.scss";
+@import "../../app/globalStyles/colorsStyles.scss";
+
+.hero {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 2rem;
+
+  padding: 2rem 0;
+}
+
+.paragraph {
+  justify-self: center;
+  padding: 0 2rem;
+  max-width: 80%;
+
+  line-height: 1.5;
+
+  font-size: 1rem;
+
+  text-align: justify;
+
+  @include media("<=tablet") {
+    max-width: 100%;
+  }
+}
+
+.heroBanner {
+  justify-self: center;
+
+  max-width: fit-content;
+  max-height: fit-content;
+}
+
+.title {
+  max-width: fit-content;
+  max-height: fit-content;
+  margin-bottom: 1rem;
+  padding: 0.3rem;
+  border-radius: 5px;
+
+  color: white;
+  background-color: $backgroud-secondary;
+}

@@ -1,0 +1,131 @@
+@import "../../../app/globalStyles/colorsStyles.scss";
+@import "../../../app/globalStyles/breakpoints.scss";
+
+.list {
+  display: flex;
+  align-items: center;
+}
+
+.active-line {
+  display: inline-block;
+  position: relative;
+}
+
+.active-line::after {
+  content: "";
+  position: absolute;
+  bottom: -5;
+  left: 35%;
+  width: 30%;
+  height: 3px;
+  border-radius: 5px;
+  background-color: $primary-color;
+  transform: scaleX(0);
+  transform-origin: bottom center;
+  transition: transform 0.25s ease-out;
+}
+
+.active-line:hover::after {
+  transform: scaleX(1);
+}
+
+.menuToggle {
+  display: none;
+}
+
+/**/
+
+@include media("<=tablet") {
+  /**/
+
+  @keyframes grow-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: 100%;
+    }
+  }
+
+  @keyframes grow-up {
+    from {
+      height: 100%;
+    }
+    to {
+      height: 0;
+    }
+  }
+
+  .list {
+    display: flex;
+    position: fixed;
+    z-index: 10;
+
+    top: 0;
+    left: 0;
+
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    overflow: hidden;
+
+    width: 100%;
+    height: 0;
+    background-color: $background-primary;
+    gap: 5rem;
+  }
+
+  .list.active {
+    animation: grow-down 0.5s ease-in forwards;
+  }
+
+  .list:not(.active) {
+    animation: grow-up 0.5s ease-in forwards;
+  }
+
+  /*Hamburger Menu*/
+
+  .menuToggle {
+    display: block;
+    z-index: 11;
+
+    width: 30px;
+    height: 3px;
+    background-color: $primary-color;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 3px;
+      background-color: $primary-color;
+      border-radius: 5px;
+      transition: all 0.5s ease-in-out;
+    }
+
+    &::before {
+      transform: translateY(-10px);
+    }
+
+    &::after {
+      transform: translateY(10px);
+    }
+
+    &.active {
+      background: transparent;
+      transform: translateX(-50px);
+
+      &::before {
+        transform: rotate(45deg) translate(35px, -35px);
+      }
+
+      &::after {
+        transform: rotate(-45deg) translate(35px, 35px);
+      }
+    }
+  }
+}

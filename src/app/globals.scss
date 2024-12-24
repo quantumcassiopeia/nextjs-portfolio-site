@@ -1,0 +1,50 @@
+$background-primary: #19142a;
+$backgroud-secondary: #2b2244;
+$fonts-color: #f5f5f5;
+
+$primary-color: #d5223b;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100vw;
+  background-color: $background-primary;
+}
+
+body {
+  position: relative;
+  padding: 5rem 0;
+
+  min-height: 100vh;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  padding: 1rem;
+}
+
+h1 {
+  color: $primary-color;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+a,
+p {
+  color: $fonts-color;
+}
