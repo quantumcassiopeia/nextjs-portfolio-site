@@ -37,7 +37,7 @@ export default function Header() {
       <nav>
         <ul className={styles.nav}>
           {navLinks.map((navLink) => (
-            <li key={navLink.href} className={styles.underlined}>
+            <li key={navLink.href} className="underlined">
               <Link href={navLink.href}>{navLink.title}</Link>
             </li>
           ))}

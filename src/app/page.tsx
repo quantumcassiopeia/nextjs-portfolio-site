@@ -1,5 +1,10 @@
+import Hero from "@/Sections/Hero/Hero";
 import styles from "./page.module.scss";
 
 export default function Home() {
-  return <div></div>;
+  return (
+    <main className={styles.page}>
+      <Hero />
+    </main>
+  );
 }
