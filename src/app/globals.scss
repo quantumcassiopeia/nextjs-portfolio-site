@@ -1,3 +1,5 @@
+@use "./animations" as *;
+
 :root {
   --background: #131010;
   --primary-color: #eeac58;
@@ -52,63 +54,4 @@ p {
 p {
   font-size: 1rem;
   line-height: 1.3rem;
-}
-
-// Animations
-
-.underlined {
-  line-height: 1.5rem;
-
-  background: linear-gradient(
-      to right,
-      var(--primary-color),
-      var(--primary-color)
-    ),
-    linear-gradient(
-      to right,
-      rgba(255, 0, 0, 1),
-      rgba(255, 0, 180, 1),
-      rgba(0, 100, 200, 1)
-    );
-  background-size: 100% 3px, 0 3px;
-  background-position: 100% 100%, 0 100%;
-  background-repeat: no-repeat;
-  transition: background-size 400ms;
-}
-
-.underlined:hover {
-  background-size: 0 3px, 100% 3px;
-}
-
-.lineUp {
-  animation: 5s anim-lineUp ease-in-out forwards;
-  overflow: hidden;
-}
-
-@keyframes anim-lineUp {
-  0% {
-    opacity: 0;
-    transform: translateY(80%);
-  }
-  50% {
-    opacity: 1;
-    transform: translateY(0%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0%);
-  }
-}
-
-.fadeIn {
-  animation: 5s fadeIn ease-in-out forwards;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
