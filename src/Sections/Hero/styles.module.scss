@@ -43,6 +43,7 @@
 
 @include media("<tabletLarge") {
   .hero {
+    position: static;
     h1,
     p {
       position: static;
