@@ -41,9 +41,8 @@
   -webkit-text-stroke: 3px #ffffff28;
 }
 
-@include media("<tabletLarge") {
+@include media("<tablet") {
   .hero {
-    position: static;
     h1,
     p {
       position: static;
