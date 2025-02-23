@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
   basePath: isProd ? "nextjs-portfolio-site" : "",
   output: "export",
   images: {
-    unoptimized: false,
+    unoptimized: true,
   },
   reactStrictMode: true,
 };
