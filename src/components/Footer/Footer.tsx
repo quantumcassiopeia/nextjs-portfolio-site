@@ -2,7 +2,7 @@ import styles from "./styles.module.scss";
 
 export default function Footer() {
   return (
-    <footer className={`${styles.footer} line-grow`}>
+    <footer className={`${styles.footer} line-grow maxWidth`}>
       <p className={styles.copyright}>
         © {new Date().getFullYear()} Quantum Cassiopeia
       </p>

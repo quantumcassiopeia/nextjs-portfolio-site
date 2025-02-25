@@ -1,6 +1,34 @@
-.page {
+@use "./_breakpoints";
+
+.section1 {
+  position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 55rem;
+
+  h1,
+  p {
+    position: relative;
+    bottom: 3rem;
+    max-width: 20rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+@include breakpoints.media("<tablet") {
+  .section1 {
+    flex-direction: column;
+    height: auto;
+    min-height: 30rem;
+    align-items: center;
+
+    h1,
+    p {
+      position: static;
+    }
+  }
 }

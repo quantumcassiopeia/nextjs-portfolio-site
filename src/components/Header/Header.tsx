@@ -20,15 +20,14 @@ export default function Header() {
   ];
 
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} maxWidth`}>
       <div>
         <Link href={"/"}>
           <Image
-            src="./logo.jpeg"
+            src="./logo/logo.png"
             alt="Go to home"
+            height={50}
             width={100}
-            height={100}
-            quality={100}
             className={styles.logo}
           />
         </Link>
