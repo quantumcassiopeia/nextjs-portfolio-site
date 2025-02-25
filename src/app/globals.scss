@@ -7,14 +7,24 @@
   --primary-text-color: #f5ede3;
   --secondary-text-color: #ecc79a;
   --tetriary-text-color: #070505;
+
+  --font-body: "Poppins", sans-serif;
+  --font-heading: "Duru Sans", sans-serif;
 }
 
 html,
 body {
+  font-family: var(--font-body);
+
   background-color: var(--background);
   min-height: 100vh;
   max-width: 100vw;
   overflow-x: hidden;
+}
+
+//
+h1 {
+  font-family: var(--font-heading);
 }
 
 body {
@@ -58,6 +68,6 @@ p {
 
 .maxWidth {
   max-width: 1390px;
-  padding: 1rem 3rem;
+  padding: 1rem;
   overflow: hidden;
 }
