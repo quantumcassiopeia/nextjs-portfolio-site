@@ -1,3 +1,5 @@
+@use "../../app/breakpoints";
+
 .container {
   position: relative;
 }
@@ -23,7 +25,32 @@
   -webkit-text-stroke: 2px #ffffff28;
 }
 
+.logo {
+  position: absolute;
+  top: 10%;
+  left: 20%;
+
+  width: 100px;
+  height: auto;
+
+  opacity: 0.5;
+}
+
 .content {
   flex-grow: 1;
   min-height: 30rem; // apagar e deixar que o componente o defina
+}
+
+.primary {
+  background-color: var(--primary-background);
+}
+
+.secondary {
+  background-color: var(--secondary-background);
+}
+
+@include breakpoints.media("<tablet") {
+  .logo {
+    position: static;
+  }
 }
