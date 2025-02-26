@@ -1,16 +1,15 @@
 @use "./_breakpoints";
 
 .section1 {
-  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  height: 55rem;
 
+  padding-bottom: 3rem;
+
+  height: 55rem;
   h1,
   p {
-    position: relative;
-    bottom: 3rem;
     max-width: 20rem;
   }
 
@@ -22,13 +21,8 @@
 @include breakpoints.media("<tablet") {
   .section1 {
     flex-direction: column;
-    height: auto;
-    min-height: 30rem;
     align-items: center;
 
-    h1,
-    p {
-      position: static;
-    }
+    height: 40rem;
   }
 }

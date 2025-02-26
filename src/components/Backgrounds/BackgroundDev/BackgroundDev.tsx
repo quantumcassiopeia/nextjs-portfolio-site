@@ -7,10 +7,11 @@ interface SectionProps {
 
 const BackgroundDev: React.FC<SectionProps> = ({ children }) => {
   return (
-    <section className={styles.background}>
-      <p className={`${styles.text} lineUp`}>Developer</p>
-
-      <div className={`${styles.content} maxWidth`}>{children}</div>
+    <section className={styles.container}>
+      <div className={styles.background}>
+        <p className={`${styles.text} lineUp`}>Developer</p>
+      </div>
+      <div className={styles.content}>{children}</div>
     </section>
   );
 };

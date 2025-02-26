@@ -1,22 +1,29 @@
-.background {
+.container {
   position: relative;
+}
+
+.background {
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+  z-index: -1;
+
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
 
   width: 100vw;
-  min-height: 20rem;
+  height: 100%;
 }
 
 .text {
-  position: absolute;
-  font-size: 15vw;
+  font-size: 14cqw; // resolver isso
+
   color: transparent;
   -webkit-text-stroke: 2px #ffffff28;
 }
 
 .content {
-  width: 100%;
-  height: 100%;
+  flex-grow: 1;
+  min-height: 30rem; // apagar e deixar que o componente o defina
 }
