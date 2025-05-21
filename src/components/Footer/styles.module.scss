@@ -6,8 +6,10 @@
   justify-content: space-between;
   align-items: center;
 
-  height: 8vh;
+  min-height: 8vh;
   margin-top: auto;
+
+  text-align: center;
 }
 
 .footer::before {
